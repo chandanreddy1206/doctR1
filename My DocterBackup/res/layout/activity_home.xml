@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="6dp"
+   >
+<TableLayout 
+    android:layout_centerVertical="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+   
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:id="@+id/tr1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+              android:layout_marginRight="10dp"
+            android:id="@+id/eventsicon"
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+               android:scaleType="fitXY"
+            android:src="@drawable/eventsicon"
+            android:background="@drawable/gridstyle"
+            android:contentDescription="events icon" />
+       
+
+        <ImageView
+              android:layout_marginLeft="10dp"
+            android:id="@+id/askadoctoricon"
+             android:layout_width="30dp"
+            android:layout_height="70dp"
+               android:scaleType="fitXY"
+               android:src="@drawable/askadoctor"
+            android:background="@drawable/gridstyle"
+            android:contentDescription="ask_doctor" />
+    </TableRow>
+<TableRow >
+     <TextView 
+           android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Events"
+           android:textStyle="bold"
+            android:textColor="#87CEEB"/>
+     <TextView 
+           android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textStyle="bold"
+            android:text="Ask A Doctor"
+            android:textColor="#87CEEB"/>
+</TableRow>
+    <TableRow
+        android:id="@+id/tr2"
+        android:layout_marginTop="60dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/chaticon"
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+               android:scaleType="fitXY"
+               android:src="@drawable/chaticon"
+            android:background="@drawable/gridstyle"
+            android:contentDescription="chat_icon" />
+
+        <ImageView
+              android:layout_marginLeft="10dp"
+            android:id="@+id/appointmentsicon"
+             android:layout_width="30dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/appointments"
+            android:background="@drawable/gridstyle"
+            android:contentDescription="appointments" />
+    </TableRow>
+<TableRow >
+     <TextView 
+           android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+           android:textStyle="bold"
+            android:textColor="#87CEEB"/>
+     <TextView 
+           android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textStyle="bold"
+            android:text="Appointments"
+            android:textColor="#87CEEB"/>
+</TableRow>
+
+</TableLayout>
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/question_ans_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/question_ans_doctor_network_image_view"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/question_ans_doctor_network_image_view"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/question_ans_doctor_network_image_view"
+                android:layout_toRightOf="@+id/question_ans_doctor_network_image_view"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/question_ans_doctor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/question_ans_doctor_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <RatingBar
+                    android:id="@+id/question_ans_doctor_rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- <Button -->
+        <!-- android:id="@+id/question_ans_book_appointment" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:text="Book Appointment" -->
+        <!-- android:gravity="right"/> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_ans_linearlayout"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/question_ans_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="284dp" >
+        </ListView>
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/question_ans_record"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/question_ans_play"
+        android:background="@drawable/recordicon" />
+
+    <Button
+        android:id="@+id/question_ans_send"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/question_ans_play"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:background="@drawable/send" />
+
+    <ToggleButton
+        android:id="@+id/question_ans_play"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/playicon" />
+
+</RelativeLayout>

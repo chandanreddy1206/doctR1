@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--
+         <CalendarView
+        android:id="@+id/calendar"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/fragment_book_appointment_date_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Choose Date" />
+
+        <Button
+            android:id="@+id/fragment_book_appointment_time_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Choose Time" />
+    </LinearLayout>
+    
+     <GridView
+        android:id="@+id/fragment_book_appointment_available_slots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:numColumns="4"
+       >
+    </GridView>
+   
+    
+   <!--  <ListView 
+        android:id="@+id/fragment_book_appointment_available_slots"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </ListView> -->
+</LinearLayout>

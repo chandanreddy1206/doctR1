@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/question_ans_book_appointment"
+       android:icon="@drawable/ic_drawer"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Take Appointment"/>
+
+</menu>

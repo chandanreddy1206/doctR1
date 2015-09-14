@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="6dp"
+   >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/registration_profile_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+           android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:background="#000000" />
+
+
+<TableLayout 
+     android:layout_marginTop="10dp"
+     android:layout_width="match_parent"
+android:id="@+id/tablelayout_1"
+
+android:layout_below="@+id/registration_profile_pic"
+        android:layout_height="wrap_content">
+<TableRow 
+    android:paddingTop="5dp"
+    android:paddingRight="3dp">
+    <TextView
+        android:id="@+id/registration_display_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Name"
+         />
+
+    <EditText
+       android:layout_margin="5dp"
+        android:id="@+id/registration_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:background="@drawable/editextstyle"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+       
+    </EditText>
+    </TableRow>
+
+
+<TableRow 
+    android:paddingTop="5dp"
+    android:paddingRight="3dp">
+    <TextView
+        android:id="@+id/registration_age_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+         />
+    <EditText
+          android:layout_margin="5dp"
+        android:id="@+id/registration_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+         android:padding="10dp"
+         android:background="@drawable/editextstyle"
+        android:inputType="number" />
+</TableRow>
+
+<TableRow
+    android:paddingTop="5dp"
+    android:paddingRight="3dp" >
+     <TextView
+        android:id="@+id/registration_email_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+         />
+     <EditText
+         android:layout_margin="5dp"
+        android:id="@+id/registration_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editextstyle"
+       android:editable="false"
+         android:ems="10"
+           android:padding="10dp"
+        android:text="TextView" />
+</TableRow>
+   
+
+
+<TableRow 
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="3dp">
+     
+     <TextView
+        android:id="@+id/registration_radio_group_gender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sex"
+         />
+    <RadioGroup
+      
+          android:layout_marginLeft="5dp"
+           android:ems="10"
+        android:id="@+id/registration_radio_group_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/registration_radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/registration_radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/registration_radio_male"
+            android:text="Female" />
+    </RadioGroup>
+</TableRow>
+
+</TableLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/registration_register_button"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tablelayout_1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button"
+        android:text="Register" />
+
+</RelativeLayout>

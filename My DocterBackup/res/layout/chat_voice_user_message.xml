@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="20dip"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <!-- <ImageButton
+        android:id="@+id/chat_voice_user_msg_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" /> -->
+<LinearLayout 
+    android:id="@+id/chat_voice_user_msg_linearlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="left">
+    <ToggleButton
+        android:id="@+id/chat_voice_user_msg_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Play"
+        android:textOn="stop" />
+
+    <SeekBar
+        android:id="@+id/chat_voice_user_seekbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="30dip"
+        android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/chat_voice_user_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chat_voice_user_msg_linearlayout"
+        android:layout_alignParentRight="true"
+        android:text="date" />
+
+</RelativeLayout>
