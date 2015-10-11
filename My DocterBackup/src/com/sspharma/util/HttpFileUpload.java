@@ -1,4 +1,4 @@
-package com.paulusworld.drawernavigationtabs.util;
+package com.sspharma.util;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import com.paulusworld.drawernavigationtabs.constants.Constants;
+import com.sspharma.constants.Constants;
 
 import android.util.Log;
 	

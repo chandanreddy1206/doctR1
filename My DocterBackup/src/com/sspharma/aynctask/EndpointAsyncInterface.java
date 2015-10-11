@@ -1,4 +1,4 @@
-package com.paulusworld.aynctask;
+package com.sspharma.aynctask;
 
 public interface EndpointAsyncInterface<T> {
 

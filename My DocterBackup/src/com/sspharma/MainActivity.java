@@ -1,15 +1,13 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
-import com.paulusworld.drawernavigationtabs.bean.User;
-import com.paulusworld.drawernavigationtabs.util.SharingPreferences;
+import com.sspharma.bean.User;
+import com.sspharma.util.SharingPreferences;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -20,7 +18,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
 

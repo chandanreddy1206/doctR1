@@ -1,8 +1,8 @@
-package com.paulusworld.drawernavigationtabs.util;
+package com.sspharma.util;
 
 import java.io.IOException;
 
-import com.paulusworld.drawernavigationtabs.QuestionAnsFragment;
+import com.sspharma.QuestionAnsFragment;
 
 import android.media.AudioRecord;
 import android.media.MediaPlayer;
@@ -11,21 +11,16 @@ import android.os.Environment;
 import android.util.Log;
 
 public class AudioUtil {
-	public static final String TAG = QuestionAnsFragment.class.getSimpleName();
+	public static final String TAG = AudioUtil.class.getSimpleName();
 	private static MediaPlayer mPlayer = null;
 	private static MediaRecorder mRecorder = null;
 
-	public static void startRecording(String fileName) {
+	public static void startRecording(String fileLocation) {
 		mRecorder = new MediaRecorder();
 		mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-		mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-		String mFileName = Environment.getExternalStorageDirectory()
-				.getAbsolutePath();
-		// mFileName += "/doctorquestion.3gp";
-		mFileName += "/" + fileName;
-		mRecorder.setOutputFile(mFileName);
-		mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-
+		mRecorder.setOutputFormat(MediaRecorder.OutputFormat.AAC_ADTS);
+		mRecorder.setOutputFile(fileLocation);
+		mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
 		try {
 			mRecorder.prepare();
 			mRecorder.start();
@@ -41,17 +36,14 @@ public class AudioUtil {
 		mRecorder = null;
 	}
 
-	public static MediaPlayer startPlaying(String fileName) {
+	public static MediaPlayer startPlaying(String fileLocation) {
 		if(mPlayer != null)
 		{
 			stopPlaying();
 		}
 		mPlayer = new MediaPlayer();
-		String mFileName = Environment.getExternalStorageDirectory()
-				.getAbsolutePath();
-		mFileName += "/" + fileName;
 		try {
-			mPlayer.setDataSource(mFileName);
+			mPlayer.setDataSource(fileLocation);
 			mPlayer.prepare();
 			mPlayer.start();
 		} catch (IOException e) {

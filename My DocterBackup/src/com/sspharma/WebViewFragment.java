@@ -1,16 +1,7 @@
-package com.paulusworld.drawernavigationtabs;
-
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.util.List;
+package com.sspharma;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.Fragment.SavedState;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.PagerTitleStrip;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

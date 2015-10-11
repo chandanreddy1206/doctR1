@@ -1,6 +1,6 @@
-package com.paulusworld.aynctask;
+package com.sspharma.aynctask;
 
-import com.paulusworld.drawernavigationtabs.bean.User;
+import com.sspharma.bean.User;
 
 import android.os.AsyncTask;
 import android.util.Log;

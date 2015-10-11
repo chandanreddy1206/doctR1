@@ -1,10 +1,10 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
-import com.paulusworld.drawernavigationtabs.bean.User;
-import com.paulusworld.drawernavigationtabs.util.CustomVolleyRequestQueue;
-import com.paulusworld.drawernavigationtabs.util.SharingPreferences;
+import com.sspharma.bean.User;
+import com.sspharma.util.CustomVolleyRequestQueue;
+import com.sspharma.util.SharingPreferences;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

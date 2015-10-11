@@ -1,10 +1,10 @@
-package com.paulusworld.drawernavigationtabs.adapter;
+package com.sspharma.adapter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import com.paulusworld.drawernavigationtabs.R;
+import com.sspharma.R;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;

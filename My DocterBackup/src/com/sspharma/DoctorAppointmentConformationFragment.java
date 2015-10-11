@@ -1,11 +1,11 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.paulusworld.drawernavigationtabs.adapter.CustomAppointmentConformationListAdapter;
+import com.sspharma.adapter.CustomAppointmentConformationListAdapter;
 
 import android.app.Activity;
 import android.os.Bundle;

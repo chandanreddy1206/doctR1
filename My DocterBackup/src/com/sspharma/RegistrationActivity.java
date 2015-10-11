@@ -1,41 +1,26 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.google.gson.reflect.TypeToken;
-import com.paulusworld.aynctask.EndpointAsyncInterface;
-import com.paulusworld.aynctask.EndpointsPostAsync;
-import com.paulusworld.aynctask.EndpointsgetAsync;
-import com.paulusworld.drawernavigationtabs.bean.User;
-import com.paulusworld.drawernavigationtabs.constants.Constants;
-import com.paulusworld.drawernavigationtabs.util.AlertDialogueUtil;
-import com.paulusworld.drawernavigationtabs.util.CustomVolleyRequestQueue;
-import com.paulusworld.drawernavigationtabs.util.SharingPreferences;
+import com.sspharma.aynctask.EndpointAsyncInterface;
+import com.sspharma.aynctask.EndpointsPostAsync;
+import com.sspharma.bean.User;
+import com.sspharma.constants.Constants;
+import com.sspharma.util.AlertDialogueUtil;
+import com.sspharma.util.CustomVolleyRequestQueue;
+import com.sspharma.util.SharingPreferences;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;

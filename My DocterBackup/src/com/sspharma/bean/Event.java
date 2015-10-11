@@ -1,4 +1,4 @@
-package com.paulusworld.drawernavigationtabs.bean;
+package com.sspharma.bean;
 
 import java.io.Serializable;
 import java.util.Date;

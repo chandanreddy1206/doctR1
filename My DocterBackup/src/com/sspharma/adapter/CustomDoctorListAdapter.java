@@ -1,6 +1,13 @@
-package com.paulusworld.drawernavigationtabs.adapter;
+package com.sspharma.adapter;
 
 import java.util.List;
+
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+import com.sspharma.QuestionAnsFragment;
+import com.sspharma.R;
+import com.sspharma.bean.Doctor;
+import com.sspharma.util.CustomVolleyRequestQueue;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,14 +21,6 @@ import android.widget.BaseAdapter;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.NetworkImageView;
-import com.paulusworld.drawernavigationtabs.QuestionAnsFragment;
-import com.paulusworld.drawernavigationtabs.R;
-import com.paulusworld.drawernavigationtabs.bean.Doctor;
-import com.paulusworld.drawernavigationtabs.constants.Constants;
-import com.paulusworld.drawernavigationtabs.util.CustomVolleyRequestQueue;
 
 public class CustomDoctorListAdapter extends BaseAdapter
 {

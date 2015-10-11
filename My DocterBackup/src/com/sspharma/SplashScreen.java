@@ -1,4 +1,4 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
 
 import com.google.android.gms.common.ConnectionResult;
@@ -6,14 +6,13 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.drive.Drive;
 import com.google.android.gms.plus.People.LoadPeopleResult;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
-import com.paulusworld.aynctask.LoadingTask;
-import com.paulusworld.aynctask.LoadingTask.LoadingTaskFinishedListener;
-import com.paulusworld.drawernavigationtabs.bean.User;
-import com.paulusworld.drawernavigationtabs.util.SharingPreferences;
+import com.sspharma.aynctask.LoadingTask;
+import com.sspharma.aynctask.LoadingTask.LoadingTaskFinishedListener;
+import com.sspharma.bean.User;
+import com.sspharma.util.SharingPreferences;
 
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -23,7 +22,6 @@ import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ProgressBar;
 
 public class SplashScreen extends Activity

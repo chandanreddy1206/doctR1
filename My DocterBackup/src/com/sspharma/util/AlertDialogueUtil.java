@@ -1,6 +1,6 @@
-package com.paulusworld.drawernavigationtabs.util;
+package com.sspharma.util;
 
-import com.paulusworld.drawernavigationtabs.RegistrationActivity;
+import com.sspharma.RegistrationActivity;
 
 import android.app.AlertDialog;
 import android.content.Context;

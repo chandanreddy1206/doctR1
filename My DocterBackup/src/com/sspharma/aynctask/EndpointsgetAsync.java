@@ -1,8 +1,8 @@
-package com.paulusworld.aynctask;
+package com.sspharma.aynctask;
 
 import java.lang.reflect.Type;
 
-import com.paulusworld.drawernavigationtabs.util.JsonUtil;
+import com.sspharma.util.JsonUtil;
 
 import android.os.AsyncTask;
 import android.util.Log;

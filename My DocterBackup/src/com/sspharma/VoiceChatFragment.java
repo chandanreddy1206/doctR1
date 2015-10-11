@@ -1,4 +1,4 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
@@ -11,12 +11,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.google.gson.reflect.TypeToken;
-import com.paulusworld.aynctask.EndpointAsyncInterface;
-import com.paulusworld.aynctask.EndpointsgetAsync;
-import com.paulusworld.drawernavigationtabs.adapter.CustomDoctorListAdapter;
-import com.paulusworld.drawernavigationtabs.bean.Doctor;
-import com.paulusworld.drawernavigationtabs.constants.Constants;
-import com.paulusworld.drawernavigationtabs.util.JsonUtil;
+import com.sspharma.adapter.CustomDoctorListAdapter;
+import com.sspharma.aynctask.EndpointAsyncInterface;
+import com.sspharma.aynctask.EndpointsgetAsync;
+import com.sspharma.bean.Doctor;
+import com.sspharma.constants.Constants;
+import com.sspharma.util.JsonUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

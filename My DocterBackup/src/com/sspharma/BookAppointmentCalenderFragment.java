@@ -1,13 +1,13 @@
-package com.paulusworld.drawernavigationtabs;
+package com.sspharma;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.paulusworld.drawernavigationtabs.adapter.CustomAvailableSlotsListAdapter;
-import com.paulusworld.drawernavigationtabs.bean.Doctor;
-import com.paulusworld.drawernavigationtabs.widget.CustomTimePickerDialog;
+import com.sspharma.adapter.CustomAvailableSlotsListAdapter;
+import com.sspharma.bean.Doctor;
+import com.sspharma.widget.CustomTimePickerDialog;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -25,7 +25,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.GridView;
-import android.widget.ListView;
 import android.widget.TimePicker;
 
 public class BookAppointmentCalenderFragment extends Fragment implements OnClickListener,OnTimeSetListener, OnDateSetListener, OnItemClickListener

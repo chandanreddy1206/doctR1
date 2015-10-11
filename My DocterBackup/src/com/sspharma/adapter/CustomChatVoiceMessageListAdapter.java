@@ -1,10 +1,20 @@
-package com.paulusworld.drawernavigationtabs.adapter;
+package com.sspharma.adapter;
 
+import java.io.File;
 import java.util.List;
 
+import com.sspharma.R;
+import com.sspharma.aynctask.DownloadFile;
+import com.sspharma.aynctask.DownloadFileInterface;
+import com.sspharma.bean.VoiceMessage;
+import com.sspharma.constants.Constants;
+import com.sspharma.util.AudioUtil;
+
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
@@ -13,13 +23,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.paulusworld.drawernavigationtabs.R;
-import com.paulusworld.drawernavigationtabs.bean.VoiceMessage;
-import com.paulusworld.drawernavigationtabs.util.AudioUtil;
-
-public class CustomChatVoiceMessageListAdapter extends BaseAdapter {
+public class CustomChatVoiceMessageListAdapter extends BaseAdapter implements DownloadFileInterface {
 
 	private LayoutInflater inflater;
 	private FragmentActivity callbackActivity;
@@ -105,45 +112,55 @@ public class CustomChatVoiceMessageListAdapter extends BaseAdapter {
 		public void onClick(View v) {
 			if (v.getId() == holder.play.getId()) {
 				if (holder.play.isChecked()) {
-					holder.seekBar.setEnabled(true);
-					final MediaPlayer mediaPlayer = AudioUtil
-							.startPlaying(voiceMessage.getLocalFileUlr());
-					final int duration = mediaPlayer.getDuration() / 1000;
-					holder.seekBar.setMax(duration);
-					callbackActivity.runOnUiThread(new Runnable() {
+					String voiceMsgLocation = Constants.APP_DIRECTORY +"/"+ voiceMessage.getLocalFileName();
+					File file = new File(voiceMsgLocation);
+					if(file.exists())
+					{
+						holder.seekBar.setEnabled(true);
+						final MediaPlayer mediaPlayer = AudioUtil.startPlaying(voiceMsgLocation);
+						final int duration = mediaPlayer.getDuration() / 1000;
+						holder.seekBar.setMax(duration);
+						callbackActivity.runOnUiThread(new Runnable() {
 
-						@Override
-						public void run() {
-							if (mediaPlayer != null) {
-								try {
-									int mCurrentPosition = mediaPlayer
-											.getCurrentPosition() / 1000;
-									if (mCurrentPosition < duration) {
-										holder.seekBar
-												.setProgress(mCurrentPosition);
-										mHandler.postDelayed(this, 1000);
-									} else {
-										holder.seekBar.setEnabled(false);
-										AudioUtil.stopPlaying();
-										holder.seekBar.setProgress(0);
-										holder.play.setChecked(false);
-									}
-								} catch (Exception e) {
-									e.printStackTrace();
-									try{
-										holder.seekBar.setEnabled(false);
-										holder.seekBar.setProgress(0);
-										holder.play.setChecked(false);
-										AudioUtil.stopPlaying();
-									}
-									catch(Exception e1)
-									{
-										e1.printStackTrace();
+							@Override
+							public void run() {
+								if (mediaPlayer != null) {
+									try {
+										int mCurrentPosition = mediaPlayer.getCurrentPosition() / 1000;
+										if (mCurrentPosition < duration) {
+											holder.seekBar.setProgress(mCurrentPosition);
+											mHandler.postDelayed(this, 1000);
+										} else {
+											holder.seekBar.setEnabled(false);
+											AudioUtil.stopPlaying();
+											holder.seekBar.setProgress(0);
+											holder.play.setChecked(false);
+										}
+									} catch (Exception e) {
+										e.printStackTrace();
+										try {
+											holder.seekBar.setEnabled(false);
+											holder.seekBar.setProgress(0);
+											holder.play.setChecked(false);
+											AudioUtil.stopPlaying();
+										} catch (Exception e1) {
+											e1.printStackTrace();
+										}
 									}
 								}
 							}
-						}
-					});
+						});
+					}
+					else
+					{
+						Toast.makeText(callbackActivity, "File Not found", Toast.LENGTH_SHORT).show();
+						ProgressDialog dialog = new ProgressDialog(callbackActivity);
+						dialog.setMessage("Downloading File. Please wait ...");
+						dialog.setCancelable(true);
+						dialog.setMax(100);
+						dialog.setSecondaryProgress(ProgressDialog.STYLE_HORIZONTAL);
+						new DownloadFile(CustomChatVoiceMessageListAdapter.this,dialog).execute(Constants.downloadVoiceMessageServlet + "?fileId="+voiceMessage.getDriveFileId(),voiceMsgLocation );
+					}
 				} else {
 					holder.seekBar.setEnabled(false);
 					holder.seekBar.setProgress(0);
@@ -177,6 +194,12 @@ public class CustomChatVoiceMessageListAdapter extends BaseAdapter {
 
 		}
 
+	}
+
+	@Override
+	public void downloadCompleted() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
